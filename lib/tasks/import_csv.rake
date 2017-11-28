@@ -9,6 +9,7 @@ namespace :import_csv do
 
   task items: :environment do
     CSV.foreach("#{Rails.root}/db/csv/items.csv", headers: true) do |row|
+      binding.pry
       Item.create(row.to_hash)
     end
   end
