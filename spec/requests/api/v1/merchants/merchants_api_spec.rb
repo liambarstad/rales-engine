@@ -21,7 +21,7 @@ describe "Merchants API" do
     parsed_merchant = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_success
     expect(parsed_merchant).to have_key(:name)
-    expect(parsed_mechant[:id]).to eq(merchant.id)
-    expect(parsed_mechant[:name]).to_not eq(merchants.last.name)
+    expect(parsed_merchant[:id]).to eq(merchant.id)
+    expect(parsed_merchant[:name]).to_not eq(merchants.last.name)
   end
 end
