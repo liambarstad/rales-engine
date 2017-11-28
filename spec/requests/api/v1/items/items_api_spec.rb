@@ -49,7 +49,7 @@ RSpec.describe "items basic endpoints" do
     it "can pick a random item" do
       item1, item2, item3 = create_list(:item, 3)
 
-      get "/api/v1/item/random.json"
+      get "/api/v1/items/random.json"
       result = JSON.parse(response.body)
 
       expect(response).to be_success
