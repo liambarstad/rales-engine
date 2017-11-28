@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
     create_table :items do |t|
       t.string :name
       t.text :decription
-      t.integer :unit_price
+      t.float :unit_price
 
       t.timestamps
     end

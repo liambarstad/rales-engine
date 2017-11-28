@@ -1,11 +1,11 @@
 class InvoiceItem < ApplicationRecord
 
-  before_save :format_unit_price
+  before_create :format_unit_price
 
   private
 
   def format_unit_price
-    unit_price.insert(-3, ".")
+    self.unit_price = (unit_price / 100).round(2)
   end
 
 end
