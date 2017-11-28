@@ -1,5 +1,8 @@
 class InvoiceItem < ApplicationRecord
 
+  belongs_to :item
+  belongs_to :invoice
+
   before_create :format_unit_price
 
   private
