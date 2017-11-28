@@ -10,14 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128013057) do
+ActiveRecord::Schema.define(version: 20171128044050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "invoice_items", force: :cascade do |t|
-    t.integer "quantity"
-    t.float "unit_price"
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -25,12 +21,16 @@ ActiveRecord::Schema.define(version: 20171128013057) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  
+
+  create_table "invoice_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.float "unit_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "invoices", force: :cascade do |t|
     t.string "status"
-
-  create_table "merchants", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 20171128013057) do
     t.string "name"
     t.text "decription"
     t.float "unit_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merchants", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "transactions", force: :cascade do |t|
     t.integer "invoice_id"
