@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   namespace :api do
     namespace :v1 do
 
@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get '/invoice_items/find_all', to: 'invoice_items/find#index'
       get '/invoice_items/random', to: 'invoice_items/random#show'
 
+      get '/merchants/find', to: 'merchants/find#show'
+      
       resources :invoices, only: [:index, :show]
       resources :items, only: [:index, :show]
       resources :invoice_items, only: [:index, :show]
