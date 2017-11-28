@@ -107,6 +107,19 @@ describe "Merchants API" do
 
     xit "finds all merchants by updated_at date" do
     end
+  end
 
+  describe "/api/v1/merchants/random" do
+    it "returns a random merchant" do
+      merchants = create_list(:merchant, 3)
+      merchant_names = merchants.map {|merchant| merchant.name}
+
+      get "/api/v1/merchants/random"
+
+      random_merchant = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_success
+      expect(merchant_names).to include(random_merchant[:name])
+    end
   end
 end
