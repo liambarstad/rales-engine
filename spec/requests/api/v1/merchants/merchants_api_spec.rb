@@ -13,7 +13,7 @@ describe "Merchants API" do
   end
 
   it "returns a single merchant" do
-    merchants = create(:merchant, 2)
+    merchants = create_list(:merchant, 2)
     merchant = merchants.first
 
     get "/api/v1/merchants/#{merchant.id}"
