@@ -1,7 +1,6 @@
 class Api::V1::Merchants::FindController < ApplicationController
 
   def show
-    require "pry"; binding.pry
     render json: Merchant.where(merchant_params)
   end
 
