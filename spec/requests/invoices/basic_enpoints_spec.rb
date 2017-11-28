@@ -23,5 +23,36 @@ RSpec.describe "invoices basic endpoints" do
       expect(result["id"]).to eq(invoice1.id)
     end
 
+    it "can return an invoice by status" do
+      invoice1 = create(:invoice)
+      invoice2 = create(:invoice, status: "resting")
+
+      get "/api/v1/invoices/find?status=resting"
+      result = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(result["id"]).to eq(invoice2.id)
+    end
+
+    it "can return all invoices by status" do
+      invoice1, invoice2 = create_list(:invoice, 2, status: 'resting')
+      invoice3 = create(:invoice)
+
+      get "/api/v1/invoices/find_all?status=resting"
+      result = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(result[0]["id"]).to eq(invoice1.id)
+      expect(result[1]["id"]).to eq(invoice2.id)
+    end
+
+    it "can pick a random invoice" do
+      invoice1, invoice2, invoice3 = create_list(:invoice, 3)
+
+      get "/api/v1/invoices/random.json"
+      result = JSON.parse(response.body)
+
+      expect(response).to be_success
+    end
   end
 end
