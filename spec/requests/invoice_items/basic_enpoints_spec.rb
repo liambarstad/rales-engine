@@ -42,8 +42,8 @@ RSpec.describe "invoice items basic endpoints" do
       result = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(result[0]["id"]).to eq(invoice1.id)
-      expect(result[1]["id"]).to eq(invoice2.id)
+      expect(result[0]["id"]).to eq(invoice_item1.id)
+      expect(result[1]["id"]).to eq(invoice_item2.id)
     end
 
     it "can return invoice items by unit price" do

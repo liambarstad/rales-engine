@@ -1,7 +1,6 @@
 class Api::V1::InvoiceItems::FindController < ApplicationController
 
     def show
-        binding.pry
         render json: InvoiceItem.where(invoice_item_params).first
     end
 
