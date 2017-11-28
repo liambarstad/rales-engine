@@ -13,7 +13,7 @@ RSpec.describe "invoices basic endpoints" do
       expect(result[0]["id"]).to eq(invoices[0].id)
     end
 
-    xit "can return a single invoice" do
+    it "can return a single invoice" do
       invoice1, invoice2 = create_list(:invoice, 2)
 
       get "/api/v1/invoices/#{invoice1.id}.json"
