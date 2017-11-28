@@ -19,4 +19,10 @@ namespace :import_csv do
     end
   end
 
+  task merchants: :environment do
+    CSV.foreach("#{Rails.root}/db/csv/merchants.csv", headers: true) do |row|
+      Merchant.create!(row.to_hash)
+    end
+  end
+
 end
