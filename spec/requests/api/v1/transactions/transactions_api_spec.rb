@@ -9,7 +9,7 @@ describe "Transactions API" do
     transactions = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(response.status_code).to eq(200)
+    expect(response.status).to eq(200)
     expect(transactions.count).to eq(4)
   end
 end
