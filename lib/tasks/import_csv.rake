@@ -37,4 +37,5 @@ namespace :import_csv do
     end
   end
 
+  task all: [:items, :invoice_items, :merchants, :transactions, :customers, :invoices]
 end
