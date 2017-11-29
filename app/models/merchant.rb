@@ -6,8 +6,9 @@ class Merchant < ApplicationRecord
   def favorite_customer
     Customer.left_joins(invoices: :transactions)
     .group('customers.id')
-    .where(invoices: { merchant_id: id }, transactions: { result: 'success' })
-    .order('count(transactions.id)')
+    .where(invoices: { merchant_id: id })
+    .merge(Transaction.successful)
+    .order('count(transactions.id) DESC')
     .first
   end
 
