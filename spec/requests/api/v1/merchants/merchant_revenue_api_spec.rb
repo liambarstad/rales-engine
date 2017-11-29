@@ -9,9 +9,9 @@ describe "Merchants API" do
       item2 = create(:item, unit_price: 20012)
       item3 = create(:item, unit_price: 2500)
       merchant.items << [item1, item2, item3]
-      invoice1 = create(:invoice, status: 'shipped')
-      invoice2 = create(:invoice, status: 'shipped')
-      invoice3 = create(:invoice, status: 'shipped')
+      invoice1 = create(:invoice, status: 'shipped', merchant: merchant)
+      invoice2 = create(:invoice, status: 'shipped', merchant: merchant)
+      invoice3 = create(:invoice, status: 'shipped', merchant: merchant)
       item1.invoice_items << create(:invoice_item, invoice: invoice1, quantity: 3, unit_price: item1.unit_price)
       item1.invoice_items << create(:invoice_item, invoice: invoice2, quantity: 2, unit_price: item1.unit_price)
       item2.invoice_items << create(:invoice_item, invoice: invoice1, quantity: 1, unit_price: item2.unit_price)
@@ -20,7 +20,6 @@ describe "Merchants API" do
       transaction2 = create(:transaction, invoice: invoice2, result: 'success')
       transaction3 = create(:transaction, invoice: invoice3, result: 'failed')
 
-      require "pry"; binding.pry
       get "/api/v1/merchants/#{merchant.id}/revenue"
 
       revenue = JSON.parse(response.body, symbolize_names: true)
