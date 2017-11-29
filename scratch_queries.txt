@@ -1,0 +1,31 @@
+Invoice.left_joins(:invoice_items, :transactions).group('invoices.id').order('sum(invoice_items.quantity * invoice_items.unit_price)').where(transactions: { result: 'success'}) = top 5 most successful transactions
+
+merchants favorite customer (total number of successful transactions) = Customer.left_joins(invoices: :transactions).group('customers.id').where(invoices: { merchant_id: 1 }, transactions: { result: 'success' }).order('count(transactions.id)').first 
+
+GET /api/v1/merchants/revenue?date=x returns the total revenue for date x across all merchants =
+
+Invoice.left_joins(:invoice_items, :transactions).where(updated_at: #{date}, transactions: { result: 'success' }).sum('invoice_items.quantity * invoice_items.unit_price')
+
+GET /api/v1/merchants/most_revenue?quantity=x returns the top x merchants ranked by total revenue =
+
+Merchant.left_joins(invoices: [:invoice_items, :transactions]).group('merchants.id').where(transactions: { result: 'success' }).order('sum(invoice_items.unit_price * invoice_items.quantity) DESC').limit(x)
+
+GET /api/v1/items/most_revenue?quantity=x returns the top x items ranked by total revenue generated
+
+Item.left_joins(invoice_items: { invoice: :transactions }).group('items.id').where(transactions: { result: 'success' }).order('sum(invoice_items.quantity * invoice_items.unit_price) DESC').limit(x)
+
+BOSS MODE: GET /api/v1/merchants/:id/customers_with_pending_invoices returns a collection of customers which have pending (unpaid) invoices. A pending invoice has no transactions with a result of success. This means all transactions are failed. Postgres has an EXCEPT operator that might be useful. ActiveRecord also has a find_by_sql that might help.
+
+
+
+NOT USEFUL:
+
+GET /api/v1/merchants/:id/revenue returns the total revenue for that merchant across successful transactions =
+Merchant.find(1).invoices.left_joins(:invoice_items, :transactions).where(transactions: { result: 'success' }).sum('invoice_items.quantity * invoice_items.unit_price')
+
+GET /api/v1/merchants/:id/revenue?date=x returns the total revenue for that merchant for a specific invoice date x =
+Merchant.find(1).invoices.left_joins(:invoice_items, :transactions).where(updated_at: '03/23/12', transactions: { result: 'success' }).sum('invoice_items.quantity * invoice_items.unit_price')
+
+
+
+
