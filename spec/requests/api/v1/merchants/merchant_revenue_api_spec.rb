@@ -26,7 +26,7 @@ describe "Merchants API" do
 
       expect(response).to be_success
       expect(revenue).to have_key(:revenue)
-      expect(revenue[:revenue]).to eq(700.12)
+      expect(revenue[:revenue]).to eq("700.12")
     end
   end
 end

@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/environment.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/application.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/application.rb": [
         1,
         null,
         1,
@@ -43,12 +43,12 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/boot.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/environments/test.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/environments/test.rb": [
         1,
         null,
         null,
@@ -92,7 +92,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/application_controller_renderer.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -102,7 +102,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/backtrace_silencers.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -111,7 +111,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/cors.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/cors.rb": [
         null,
         null,
         null,
@@ -129,13 +129,13 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/filter_parameter_logging.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/inflections.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -153,13 +153,13 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/mime_types.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/initializers/wrap_parameters.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -175,34 +175,15 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/customers.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/customers.rb": [
         1,
         1,
-        60,
-        60,
+        64,
+        64,
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/invoice_items.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/invoices.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/items.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/invoice_items.rb": [
         1,
         1,
         1,
@@ -212,14 +193,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/merchants.rb": [
-        1,
-        1,
-        121,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/factories/transactions.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/invoices.rb": [
         1,
         1,
         1,
@@ -228,7 +202,33 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/config/routes.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/items.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/merchants.rb": [
+        1,
+        1,
+        123,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/factories/transactions.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/config/routes.rb": [
         1,
         null,
         1,
@@ -242,10 +242,8 @@
         1,
         1,
         1,
+        1,
         null,
-        1,
-        1,
-        1,
         null,
         1,
         1,
@@ -257,6 +255,15 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -264,22 +271,22 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/support/factory_bot.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/support/factory_bot.rb": [
         1,
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/customer.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/customer.rb": [
         1,
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/application_record.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/invoice_item_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/invoice_item_spec.rb": [
         1,
         null,
         1,
@@ -287,7 +294,7 @@
         2,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/invoice_item.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/invoice_item.rb": [
         1,
         null,
         1,
@@ -298,12 +305,12 @@
         1,
         null,
         1,
-        32,
+        34,
         null,
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/invoice_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/invoice_spec.rb": [
         1,
         null,
         1,
@@ -314,7 +321,7 @@
         2,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/invoice.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/invoice.rb": [
         1,
         null,
         1,
@@ -325,7 +332,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/item_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/item_spec.rb": [
         1,
         null,
         1,
@@ -334,38 +341,14 @@
         2,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/item.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/item.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/items/most_revenue_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/merchant_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/merchant_spec.rb": [
         1,
         null,
         1,
@@ -373,89 +356,97 @@
         2,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/merchant.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/merchant.rb": [
         1,
         null,
         1,
         1,
         null,
-        1,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         null,
         null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/merchants/merchant_favorite_customer_spec.rb": [
-        1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
+        3,
+        null,
         null,
         1,
         null,
+        null,
+        null,
         1,
+        null,
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/models/transaction_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/merchants/merchant_favorite_customer_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/models/transaction_spec.rb": [
         1,
         null,
         1,
         2,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/models/transaction.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/models/transaction.rb": [
         1,
         null,
         1,
         null,
-        2,
-        1,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/customers/customers_api_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
+        5,
         1,
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/invoice_items/basic_enpoints_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/customers/customers_api_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/invoice_items/basic_enpoints_spec.rb": [
         1,
         null,
         1,
@@ -511,66 +502,6 @@
         1,
         1,
         null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/invoices/invoices_api_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
         1,
         1,
         null,
@@ -586,7 +517,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/items/items_api_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/invoices/invoices_api_spec.rb": [
         1,
         null,
         1,
@@ -646,7 +577,125 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/merchants/merchants_api_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/items/items_api_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/merchants/merchant_favorite_customer_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/merchants/merchant_revenue_api_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/merchants/merchants_api_spec.rb": [
         1,
         null,
         1,
@@ -773,7 +822,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/api/v1/transactions/transactions_api_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/api/v1/transactions/transactions_api_spec.rb": [
         1,
         null,
         1,
@@ -804,7 +853,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/spec/requests/invoice_items/basic_enpoints_spec.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/spec/requests/invoice_items/basic_enpoints_spec.rb": [
         1,
         null,
         1,
@@ -875,7 +924,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/customers_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/customers_controller.rb": [
         1,
         null,
         1,
@@ -887,11 +936,11 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/application_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/application_controller.rb": [
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoice_items_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoice_items_controller.rb": [
         1,
         null,
         1,
@@ -904,7 +953,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoice_items/find_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoice_items/find_controller.rb": [
         1,
         null,
         1,
@@ -930,7 +979,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoice_items/random_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoice_items/random_controller.rb": [
         1,
         null,
         1,
@@ -940,7 +989,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoices_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoices_controller.rb": [
         1,
         null,
         1,
@@ -953,48 +1002,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoices/find_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/invoices/random_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/items_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/items/find_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoices/find_controller.rb": [
         1,
         null,
         1,
@@ -1013,7 +1021,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/items/random_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/invoices/random_controller.rb": [
         1,
         null,
         1,
@@ -1022,7 +1030,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/merchants_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/items_controller.rb": [
         1,
         null,
         1,
@@ -1035,12 +1043,73 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/serializers/merchant_serializer.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/items/find_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/items/random_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/merchants/favorite_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/revenue_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/merchants_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marshall/turing/3module/projects/rales-engine/app/serializers/merchant_serializer.rb": [
         1,
         1,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/merchants/find_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/merchants/find_controller.rb": [
         1,
         null,
         1,
@@ -1058,7 +1127,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/merchants/random_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/merchants/random_controller.rb": [
         1,
         null,
         1,
@@ -1067,7 +1136,7 @@
         null,
         null
       ],
-      "/Users/chameleon/Documents/TURING/MOD3.5/projects/rales_engine/app/controllers/api/v1/transactions_controller.rb": [
+      "/Users/marshall/turing/3module/projects/rales-engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         null,
         1,
@@ -1080,6 +1149,6 @@
         null
       ]
     },
-    "timestamp": 1511988565
+    "timestamp": 1511998718
   }
 }
