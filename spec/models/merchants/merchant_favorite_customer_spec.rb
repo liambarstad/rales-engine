@@ -10,7 +10,6 @@ RSpec.feature "can get favorite customer for merchant" do
     transaction3 = create(:transaction, invoice: invoice1, result: 'failed')
     transaction4 = create(:transaction, invoice: invoice2, result: 'success')
 
-    binding.pry
     favorite_customer = merchant.favorite_customer
 
     expect(favorite_customer.id).to eq(customer2.id)
