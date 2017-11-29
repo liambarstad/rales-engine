@@ -8,18 +8,23 @@ Rails.application.routes.draw do
         get '/random', to: 'random#show'
       end
 
-      get '/invoices/find', to: 'invoices/find#show'
-      get '/invoices/find_all', to: 'invoices/find#index'
-      get '/invoices/random', to: 'invoices/random#show'
+      namespace :invoices do
+        get '/find', to: 'find#show'
+        get '/find_all', to: 'find#index'
+        get '/random', to: 'random#show'
+      end
 
-      get '/invoice_items/find', to: 'invoice_items/find#show'
-      get '/invoice_items/find_all', to: 'invoice_items/find#index'
-      get '/invoice_items/random', to: 'invoice_items/random#show'
+      namespace :invoice_items do
+        get '/find', to: 'find#show'
+        get '/find_all', to: 'find#index'
+        get '/random', to: 'random#show'
+      end
 
       namespace :merchants do
         get '/find', to: 'find#show'
         get '/find_all', to: 'find#index'
         get '/random', to: 'random#show'
+        get '/:id/favorite_customer', to: 'favorite#show'
       end
 
       resources :invoices, only: [:index, :show]
