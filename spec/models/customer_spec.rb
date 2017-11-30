@@ -19,7 +19,6 @@ RSpec.describe Customer, type: :model do
       create :invoice_item, invoice: invoice2, item: item2, quantity: 2
       create :transaction, invoice: invoice2
 
-
       expect(customer.favorite_merchant).to eq merchant2
     end
   end
