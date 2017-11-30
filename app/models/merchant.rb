@@ -28,6 +28,13 @@ class Merchant < ApplicationRecord
     end
   end
 
+  def customers_with_pending_invoices
+    Customer
+    .joins(invoices: [:merchant, :transactions])
+    .where(invoices: { merchant_id: id })
+    .where.not(transactions: { result: 'success' })
+  end
+
   def self.total_revenue(date)
     Invoice.total_revenue(date)
   end
