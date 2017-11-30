@@ -26,6 +26,15 @@ class Item < ApplicationRecord
     .created_at
   end
 
+  def self.by_revenue(quantity = 1)
+    quantity ||= 1
+    left_joins(invoice_items: { invoice: :transactions })
+    .group('items.id')
+    .merge(Transaction.successful)
+    .order('sum(invoice_items.quantity * invoice_items.unit_price) DESC')
+    .limit(quantity)
+  end
+
   private
 
   def format_unit_price
