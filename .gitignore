@@ -15,11 +15,7 @@
 
 .byebug_history
 
-<<<<<<< HEAD
 /coverage/*
 coverage/**
 **/coverage
-=======
-
->>>>>>> 26146b80dc7f7a0e830b933eea43baaf1d09f18a
 coverage
