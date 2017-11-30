@@ -16,7 +16,18 @@ RSpec.describe "api can return customer associations" do
   end
 
   it "can return transactions" do
+    customer = create(:customer)
+    invoice = create(:invoice, customer: customer)
+    transaction1, transaction2 = create_list(:transaction, 2, invoice: invoice)
+    transaction3 = create(:transaction)
 
+    get "/api/v1/customers/#{customer.id}/transactions"
+    result = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(result.count).to eq(2)
+    expect(result[0]["id"]).to eq(transaction1.id)
+    expect(result[1]["id"]).to eq(transaction2.id)
   end
 
 end
