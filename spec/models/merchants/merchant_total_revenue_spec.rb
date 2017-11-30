@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "can return the total revenue across all merchants" do
+RSpec.feature "merchant can output total revenue" do
   it "with no date" do
     invoice1, invoice2, invoice3 = create_list(:invoice, 3)
     item = create(:item)
@@ -15,12 +15,8 @@ RSpec.describe "can return the total revenue across all merchants" do
     total2 = invoice_item2.quantity * invoice_item2.unit_price
     total3 = invoice_item3.quantity * invoice_item3.unit_price
     total = total1 + total2 + total3
-    
-    get '/api/v1/merchants/revenue'
-    result = JSON.parse(response.body)
-    
-    expect(response).to be_success
-    expect(result["revenue"]).to eq(total.to_s)
-  end
+    proposed_total = Merchant.total_revenue
 
-end
+    expect(proposed_total).to eq(total)
+  end
+end  
