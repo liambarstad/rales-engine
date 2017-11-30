@@ -54,6 +54,19 @@ describe "Transactions API" do
       expect(parsed_transaction[:id]).to eq(transaction1.id)
       expect(parsed_transaction[:result]).to eq(transaction1.result)
     end
+
+    it "finds transaction by credit_card_number" do
+      create(:transaction, credit_card_number: "4187236528793125")
+      transaction2 = create(:transaction, credit_card_number: "0910934023090923")
+
+      get "/api/v1/transactions/find?credit_card_number=#{transaction2.credit_card_number}"
+
+      parsed_transaction = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_success
+      expect(parsed_transaction).to have_key(:credit_card_number)
+      expect(parsed_transaction[:credit_card_number]).to eq(transaction2.credit_card_number)
+    end
   end
 
   describe "it finds a collection of transactions with search parameters" do
