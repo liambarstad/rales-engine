@@ -31,7 +31,7 @@ class Item < ApplicationRecord
     left_joins(invoice_items: { invoice: :transactions })
     .group('items.id')
     .merge(Transaction.successful)
-    .order('sum(invoice_items.quantity * invoice_items.unit_price) DESC')
+    .reorder('sum(invoice_items.quantity * invoice_items.unit_price) DESC')
     .limit(quantity)
   end
 
