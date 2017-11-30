@@ -53,7 +53,9 @@ Rails.application.routes.draw do
          get '/revenue', to: 'revenue#show'
       end
       resources :transactions, only: [:index, :show]
-      resources :customers, only: [:index, :show]
+      resources :customers, only: [:index, :show] do
+        get '/favorite_merchant', to: 'customer_favorite_merchant#show'
+      end
     end
   end
 
