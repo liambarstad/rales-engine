@@ -33,4 +33,8 @@ class Merchant < ApplicationRecord
     .limit(quantity)
   end
 
+  def self.most_items(quantity)
+    
+  end
+
 end
