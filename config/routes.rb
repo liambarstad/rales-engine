@@ -31,6 +31,12 @@ Rails.application.routes.draw do
         get '/:id/favorite_customer', to: 'favorite#show'
       end
 
+      namespace :customers do
+        get 'find', to: 'find#show'
+        get '/find_all', to: 'find#index'
+        get '/random', to: 'random#show'
+      end
+
       resources :invoices, only: [:index, :show]
       resources :items, only: [:index, :show] do
         get '/best_day', to: 'best_day#show'
