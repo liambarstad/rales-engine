@@ -20,6 +20,13 @@ class Merchant < ApplicationRecord
     .sum('invoice_items.quantity * invoice_items.unit_price')
   end
 
+  def customers_with_pending_invoices
+    Customer
+    .joins(invoices: [:merchant, :transactions])
+    .where(invoices: { merchant_id: id })
+    .where.not(transactions: { result: 'success' })
+  end
+
   def self.total_revenue(date)
     Invoice
     .left_joins(:invoice_items, :transactions)
