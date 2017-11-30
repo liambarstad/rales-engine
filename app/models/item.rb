@@ -11,7 +11,8 @@ class Item < ApplicationRecord
     select('items.*, sum(invoice_items.quantity) as total_sold')
     .joins(:invoices)
     .group(:id)
-    .order('total_sold desc').limit(quantity)
+    .reorder('total_sold desc')
+    .limit(quantity)
   end
 
   def best_day
