@@ -3,6 +3,8 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
 
+  default_scope -> { order(:id) }
+
   before_create :format_unit_price
 
   def self.most_sold_items(quantity = 5)
