@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "merchant model can return customers with pending invoices" do
-  it "with valid info" do
+RSpec.describe "api can return customers with pending invoices" do
+  it "for a merchant" do 
     merchant = create(:merchant)
     customer1, customer2, customer3 = create_list(:customer, 3)
     invoice1 = create(:invoice, merchant: merchant, customer: customer1)
@@ -14,9 +14,11 @@ RSpec.feature "merchant model can return customers with pending invoices" do
 
     pending_customers = merchant.customers_with_pending_invoices
     pending_customer_ids = pending_customers.pluck(:id)
+    get "/api/v1/merchants/#{merchant.id}/customers_with_pending_invoices"
+    result = JSON.parse(response.body)
 
-    expect(pending_customer_ids).to include(customer1.id)
-    expect(pending_customer_ids).to include(customer2.id)
-    expect(pending_customer_ids).not_to include(customer3.id)
+    expect(response).to be_success
+    expect(result[0]["id"]).to eq(pending_customer_ids[0])
+    expect(result[1]["id"]).to eq(pending_customer_ids[1])
   end
 end
