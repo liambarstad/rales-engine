@@ -14,6 +14,18 @@ class Item < ApplicationRecord
     .order('total_sold desc').limit(quantity)
   end
 
+  def best_day
+    invoices
+    .select('invoices.created_at, count(invoices.created_at) as number_of_sales')
+    .joins(:transactions)
+    .merge(Transaction.successful)
+    .group(:id)
+    .order('number_of_sales desc')
+    .order('invoices.created_at desc')
+    .first
+    .created_at
+  end
+
   private
 
   def format_unit_price
