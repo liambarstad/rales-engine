@@ -2,25 +2,13 @@ require 'rails_helper'
 
 describe "Merchants API" do
   describe "get /api/v1/merchants/:id/revenue" do
-    it "returns the revenue associated with a merchant" do
+    it "calls revenue on the merchant specified in the params and returns revenue as json" do
 
-      merchant = create(:merchant)
-      item1 = create(:item, unit_price: 10000)
-      item2 = create(:item, unit_price: 20012)
-      item3 = create(:item, unit_price: 2500)
-      merchant.items << [item1, item2, item3]
-      invoice1 = create(:invoice, status: 'shipped', merchant: merchant)
-      invoice2 = create(:invoice, status: 'shipped', merchant: merchant)
-      invoice3 = create(:invoice, status: 'shipped', merchant: merchant)
-      item1.invoice_items << create(:invoice_item, invoice: invoice1, quantity: 3, unit_price: item1.unit_price)
-      item1.invoice_items << create(:invoice_item, invoice: invoice2, quantity: 2, unit_price: item1.unit_price)
-      item2.invoice_items << create(:invoice_item, invoice: invoice1, quantity: 1, unit_price: item2.unit_price)
-      item3.invoice_items << create(:invoice_item, invoice: invoice3, quantity: 1, unit_price: item3.unit_price)
-      transaction1 = create(:transaction, invoice: invoice1, result: 'success')
-      transaction2 = create(:transaction, invoice: invoice2, result: 'success')
-      transaction3 = create(:transaction, invoice: invoice3, result: 'failed')
+      merchant = double()
+      allow(Merchant).to receive(:find).with("1") { merchant }
+      expect(merchant).to receive(:revenue).once { 700.12 }
 
-      get "/api/v1/merchants/#{merchant.id}/revenue"
+      get "/api/v1/merchants/1/revenue"
 
       revenue = JSON.parse(response.body, symbolize_names: true)
 
