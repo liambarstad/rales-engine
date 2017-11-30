@@ -67,14 +67,6 @@ describe "Merchants API" do
       expect(parsed_merchant[:name]).to eq(merchant1.name)
       expect(parsed_merchant[:name]).to_not eq(merchant2.name)
     end
-
-    xit "finds merchant by created_at" do
-
-    end
-
-    xit "finds merchant by updated_at" do
-
-    end
   end
 
   describe "it finds a collection of merchants with search parameters" do
@@ -100,12 +92,6 @@ describe "Merchants API" do
       expect(response).to be_success
       expect(parsed_merchants.class).to eq(Array)
       expect(parsed_merchants[0][:name]).to eq(merchant2.name)
-    end
-
-    xit "finds all merchants by created_at date" do
-    end
-
-    xit "finds all merchants by updated_at date" do
     end
   end
 
