@@ -25,6 +25,7 @@ Rails.application.routes.draw do
         get '/find_all', to: 'find#index'
         get '/random', to: 'random#show'
         get '/revenue', to: 'revenue#index'
+        get '/most_revenue', to: 'most_revenue#index'
         get '/:id/favorite_customer', to: 'favorite#show'
       end
 

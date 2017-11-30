@@ -13,7 +13,7 @@ RSpec.feature "merchant class can order by revenue" do
     transaction2 = create(:transaction, invoice: invoice2, result: 'success')
     transaction3 = create(:transaction, invoice: invoice3, result: 'failed')
 
-    top_merchant = Merchant.by_revenue
+    top_merchant = Merchant.by_revenue(1)
 
     expect(top_merchant.to_a.count).to eq(1)
     expect(top_merchant.first.id).to eq(merchant1.id)
