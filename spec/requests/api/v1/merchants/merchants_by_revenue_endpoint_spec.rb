@@ -13,13 +13,13 @@ RSpec.describe "can get merchants by revenue" do
     transaction2 = create(:transaction, invoice: invoice2, result: 'success')
     transaction3 = create(:transaction, invoice: invoice3, result: 'failed')
 
-    top_merchant = Merchant.by_revenue
+    top_merchant = Merchant.by_revenue(1)
     get '/api/v1/merchants/most_revenue'
-    result = JSON.parse(response)
+    result = JSON.parse(response.body)
 
     expect(response).to be_success
     expect(result.count).to eq(1)
-    expect(result[0]["id"]).to eq(top_merchant.id)
+    expect(result[0]["id"]).to eq(top_merchant.first.id)
   end
 
   it "with arguement" do
@@ -36,11 +36,11 @@ RSpec.describe "can get merchants by revenue" do
 
     top_merchants = Merchant.by_revenue(2)
     get '/api/v1/merchants/most_revenue?quantity=2'
-    result = JSON.parse(response)
+    result = JSON.parse(response.body)
 
     expect(response).to be_success
     expect(result.count).to eq(2)
     expect(result[0]["id"]).to eq(top_merchants[0].id)
-    expect(result[0]["id"]).to eq(top_merchants[1].id)
+    expect(result[1]["id"]).to eq(top_merchants[1].id)
   end
 end
