@@ -27,14 +27,14 @@ RSpec.describe Item, type: :model do
 
       merchant = create :merchant
       item = create :item, merchant: merchant
-      invoice1 = create :invoice, merchant: merchant, created_at: DateTime.now - 1
-      invoice2 = create :invoice, merchant: merchant, created_at: date
+      invoice1 = create :invoice, merchant: merchant, created_at: date
+      invoice2 = create :invoice, merchant: merchant, created_at: DateTime.now - 1
       create :invoice_item, invoice: invoice1, item: item, quantity: 2
       create :invoice_item, invoice: invoice2, item: item, quantity: 2
       create :transaction, invoice: invoice1
       create :transaction, invoice: invoice2
 
-      expect(item.best_day).to eq invoice2.created_at
+      expect(item.best_day).to eq invoice1.created_at
     end
   end
 end
