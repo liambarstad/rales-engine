@@ -43,4 +43,16 @@ RSpec.describe "invoice relationships, api can return" do
     expect(result[1]["id"]).to eq(item2.id)
   end
 
+  it "associated customer" do
+    customer1, customer2 = create_list(:customer, 2)
+    invoice1 = create(:invoice, customer: customer1)
+    invoice2 = create(:invoice, customer: customer2)
+
+    get "/api/v1/invoices/#{invoice1.id}/customer"
+    result = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(result["id"]).to eq(customer1.id)
+  end
+
 end
