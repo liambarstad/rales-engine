@@ -8,7 +8,7 @@ describe "Customers API" do
       merchant = create :merchant
 
       allow(Customer).to receive(:find).with('1') { customer }
-      expect(customer).to receive(:favorite_merchant).once
+      expect(customer).to receive(:favorite_merchant).once { merchant }
 
       get '/api/v1/customers/1/favorite_merchant'
 
