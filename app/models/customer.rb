@@ -14,5 +14,4 @@ class Customer < ApplicationRecord
     .first
   end
 
-  has_many :transactions, through: :invoices
 end
