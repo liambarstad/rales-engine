@@ -28,6 +28,10 @@ class Merchant < ApplicationRecord
     end
   end
 
+  def customers_with_pending_invoices
+    Customer.pending_invoices_to_merchant(id)
+  end
+
   def self.total_revenue(date)
     Invoice.total_revenue(date)
   end
