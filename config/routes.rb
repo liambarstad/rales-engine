@@ -35,6 +35,8 @@ Rails.application.routes.draw do
         get '/most_revenue', to: 'most_revenue#index'
         get '/:id/favorite_customer', to: 'favorite#show'
         get '/most_items', to: 'ranked_items_sold#index'
+        get '/:id/items', to: 'items#index'
+        get '/:id/invoices', to: 'invoices#index'
       end
 
       namespace :customers do
@@ -58,7 +60,7 @@ Rails.application.routes.draw do
       end
       resources :invoice_items, only: [:index, :show]
       resources :merchants, only: [:index, :show] do
-         get '/revenue', to: 'revenue#show'
+        get '/revenue', to: 'revenue#show'
       end
       resources :transactions, only: [:index, :show]
       resources :customers, only: [:index, :show] do
