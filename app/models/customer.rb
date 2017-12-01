@@ -15,6 +15,7 @@ class Customer < ApplicationRecord
   end
 
   def self.pending_invoices_to_merchant(merchant_id)
+    merchant_id = merchant_id.to_i
     find_by_sql("SELECT invoices.* FROM invoices WHERE invoices.merchant_id=#{merchant_id} EXCEPT SELECT invoices.* FROM invoices INNER JOIN transactions ON transactions.invoice_id = invoices.id WHERE transactions.result='success'")
   end
 
