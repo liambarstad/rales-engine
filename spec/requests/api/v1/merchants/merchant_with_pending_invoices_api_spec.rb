@@ -12,13 +12,10 @@ RSpec.describe "api can return customers with pending invoices" do
     transaction4 = create(:transaction, invoice: invoice2, result: 'failed')
     transaction5, transaction6 = create_list(:transaction, 2, invoice: invoice3, result: 'success')
 
-    pending_customers = merchant.customers_with_pending_invoices
-    pending_customer_ids = pending_customers.pluck(:id)
     get "/api/v1/merchants/#{merchant.id}/customers_with_pending_invoices"
     result = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(result[0]["id"]).to eq(pending_customer_ids[0])
-    expect(result[1]["id"]).to eq(pending_customer_ids[1])
+    expect(result[0]["id"]).to eq(customer2.id)
   end
 end

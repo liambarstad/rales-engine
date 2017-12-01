@@ -15,7 +15,6 @@ RSpec.feature "merchant model can return customers with pending invoices" do
     pending_customers = merchant.customers_with_pending_invoices
     pending_customer_ids = pending_customers.pluck(:id)
 
-    expect(pending_customer_ids).to include(customer1.id)
     expect(pending_customer_ids).to include(customer2.id)
     expect(pending_customer_ids).not_to include(customer3.id)
   end
