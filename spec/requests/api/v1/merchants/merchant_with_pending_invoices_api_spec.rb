@@ -16,6 +16,7 @@ RSpec.describe "api can return customers with pending invoices" do
     result = JSON.parse(response.body)
 
     expect(response).to be_success
+    expect(result.count).to eq(1)
     expect(result[0]["id"]).to eq(customer2.id)
   end
 end
