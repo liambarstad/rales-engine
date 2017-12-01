@@ -1,7 +1,7 @@
 class Api::V1::RevenueController < ApplicationController
 
   def show
-    render json: { "revenue" => "#{merchant.revenue}" }
+    render json: { revenue: "#{merchant.revenue(params['date'])}" }
   end
 
   private

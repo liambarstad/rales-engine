@@ -13,11 +13,19 @@ class Merchant < ApplicationRecord
     .first
   end
 
-  def revenue
-    invoices
-    .joins(:transactions, :invoice_items)
-    .merge(Transaction.successful)
-    .sum('invoice_items.quantity * invoice_items.unit_price')
+  def revenue(date = nil)
+    if date
+      invoices
+      .joins(:transactions, :invoice_items)
+      .where(invoices: {created_at: date})
+      .merge(Transaction.successful)
+      .sum('invoice_items.quantity * invoice_items.unit_price')
+    else
+      invoices
+      .joins(:transactions, :invoice_items)
+      .merge(Transaction.successful)
+      .sum('invoice_items.quantity * invoice_items.unit_price')
+    end
   end
 
   def self.total_revenue(date)
