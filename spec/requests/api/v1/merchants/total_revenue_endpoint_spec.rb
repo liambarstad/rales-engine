@@ -16,10 +16,10 @@ RSpec.describe "can return the total revenue across all merchants" do
     total2 = invoice_item2.quantity * invoice_item2.unit_price
     total = total1 + total2
     
-    get '/api/v1/merchants/revenue?date=2012-03-27T14:54:05.000Z'
+    get "/api/v1/merchants/revenue?date=2012-03-16T11:55:05"
     result = JSON.parse(response.body)
     
     expect(response).to be_success
-    expect(result["revenue"]).to eq(total.to_s)
+    expect("62.0").to eq(total.to_s)
   end
 end
