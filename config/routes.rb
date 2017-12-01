@@ -38,6 +38,7 @@ Rails.application.routes.draw do
         get '/revenue', to: 'revenue#index'
         get '/most_revenue', to: 'most_revenue#index'
         get '/most_items', to: 'ranked_items_sold#index'
+        get '/:id/invoices', to: 'merchants#invoices'
         get '/:id/favorite_customer', to: 'favorite#show'
         get '/:id/items', to: 'items#index'
         get '/:id/customers_with_pending_invoices', to: 'pending_invoices#index'
