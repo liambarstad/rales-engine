@@ -29,13 +29,10 @@ class Merchant < ApplicationRecord
   end
 
   def customers_with_pending_invoices
-    pending_invoices = invoices.joins(:transactions).where.not(transactions: { result: 'success' }).pluck(:customer_id)
-    binding.pry
+    pending_invoices = invoices.joins(:transactions)
+    .where.not(transactions: { result: 'success' })
+    .pluck(:customer_id)
     Customer.find(pending_invoices)
-    #Customer
-    #.joins(invoices: [:merchant, :transactions])
-    #.where(invoices: { merchant_id: id })
-    #.where.not(transactions: { result: 'success' })
   end
 
   def self.total_revenue(date)
