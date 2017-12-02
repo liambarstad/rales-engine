@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 20171129145031) do
     t.citext "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "credit_card_expiration_date"
   end
 
   add_foreign_key "invoice_items", "invoices"
